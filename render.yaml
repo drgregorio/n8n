@@ -3,10 +3,9 @@ services:
     name: n8n
     env: node
     plan: free
-    repo: https://github.com/drgregorio/n8n
     branch: master
-    buildCommand: npm install
-    startCommand: npx n8n
+    buildCommand: npm install -g pnpm && pnpm install --frozen-lockfile
+    startCommand: pnpm start
     envVars:
       - key: N8N_BASIC_AUTH_USER
         sync: false
