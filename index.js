@@ -1,3 +1,1 @@
-const { start } = require("n8n");
-
-start();
+require('n8n/dist/commands');
